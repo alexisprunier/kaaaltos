@@ -3,15 +3,28 @@ var CACHE_PERCENT = 3;
 var torrentDir = 'torrent-stream';
 var torrentStream = require('torrent-stream');
 var path = require('path');
+var cpb = require('lib/cpb.js');
+
+cpb.get
 
 
 
-var engine = torrentStream('magnet:?xt=urn:btih:130C1E9D107B96D6E63DC7FE5EBF1EE59AF044E1&dn=Elysium+%282013%29+%5B1080p%5D&tr=http%3A%2F%2Ftracker.yify-torrents.com%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.publicbt.org%3A80&tr=udp%3A%2F%2Ftrackr.sytes.net%3A80&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337');
 
-engine.on('ready', function() {
+/*
+
+var engine = torrentStream('magnet:?xt=urn:btih:64F7F9E5E328C0D164C03C117B6DA9FB764A3B97&dn=The+Hunger+Games+Mockingjay+Part+1+2014+FRENCH+720p+BluRay+x264-PRiDEHD&udp://tracker.openbittorrent.com:80/announce&udp://open.demonii.com:1337');
+
+request('http://www.omgtorrent.com/films/?order=top', function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+        var $ = cheerio.load(html);
+    }
+})
+
+
+engine.on('ready', function () {
     var fileToPlay = null;
     console.log('engine:', engine);
-    engine.files.forEach(function(file) {
+    engine.files.forEach(function (file) {
         console.log('filename:', file.name);
         // get the biggest file
         if ((fileToPlay === null || fileToPlay.length < file.length)) {
@@ -25,10 +38,11 @@ engine.on('ready', function() {
 
     var cache = 0;
     // check size downloaded then play
-    cache = setInterval(function() {
+    cache = setInterval(function () {
         var percent = engine.swarm.downloaded * 100 / stream.length;
         console.log('percent:', percent);
         if (percent >= CACHE_PERCENT) {
+            // TODO : set video format
             video.src(path.join(engine.path, fileToPlay.path));
             video.play();
             clearInterval(cache);
@@ -38,4 +52,18 @@ engine.on('ready', function() {
     }, 3000);
 
 
-});
+    request({
+        method: 'GET',
+        url: 'https://api-v2launch.trakt.tv/movies/tron-legacy-2010/ratings',
+        headers: {
+            'Content-Type': 'application/json',
+            'trakt-api-version': '2',
+            'trakt-api-key': '515a27ba95fbd83f20690e5c22bceaff0dfbde7c '
+        }
+    }, function (error, response, body) {
+        console.log('Status:', response.statusCode);
+        console.log('Headers:', JSON.stringify(response.headers));
+        console.log('Response:', body);
+    });
+
+});*/
