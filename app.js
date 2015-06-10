@@ -3,7 +3,7 @@ var CACHE_PERCENT = 3;
 var torrentDir = 'torrent-stream';
 var torrentStream = require('torrent-stream');
 var path = require('path');
-var cpb = require('lib/cpb.js');
+var cpb = require('./lib/cpb.js');
 
 cpb.get
 

@@ -1,10 +1,10 @@
 {
-  "name": "Pop",
-  "version": "1.0.0",
-  "description": "",
+  "name": "Kaaaltos",
+  "version": "0.1.0",
+  "description": "Torrent Client to stream from cpabien.pw website.",
   "main": "index.html",
   "window": {
-      "title":"PopTheWeb",
+      "title":"Kaaaltos",
       "toolbar":true,
       "frame": true
 
