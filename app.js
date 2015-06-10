@@ -3,10 +3,12 @@ var CACHE_PERCENT = 3;
 var torrentDir = 'torrent-stream';
 var torrentStream = require('torrent-stream');
 var path = require('path');
+
 var cpb = require('./lib/cpb.js');
 
-cpb.get
+var CPB = cpb.CPB;
 
+console.log('list', CPB.getListTorrents(CPB.CATEGORIES.MOVIES, CPB.ORDERS.SEEDERS.DES, CPB.QUALITY.GOOD, 5));
 
 
 
