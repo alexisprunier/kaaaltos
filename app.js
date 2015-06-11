@@ -11,11 +11,6 @@ global.listFilms = null;
 
 //global.CPB.eventGetRows = function (lf) {
 var functionTest = function (lf) {
-    global.listFilms = lf;
-    var content = "oui";
-    for (l in lf) {
-        content += l;
-    }
     console.log("lasttest", lf);
 }
 global.CPB.setEventGetRows(functionTest);
