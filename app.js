@@ -9,15 +9,17 @@ global.CPB = cpb.CPB;
 
 global.listFilms = null;
 
-//global.CPB.eventGetRows = function (lf) {
-var functionTest = function (lf) {
-    console.log("lasttest", lf);
-}
-global.CPB.setEventGetRows(functionTest);
+global.CPB.setEventGetRows(function (listTorrents) {
+    $(".movie-list").empty();
+    for (i = 0; i < listTorrents.length; i++) {
+        $(".movie-list").append("<div class='movie-survey'><img alt='Movie' src='test.png' />"+listTorrents[i].name+"</div>");
+    }
+});
 
 
-
-console.log('list', global.CPB.getListTorrents(global.CPB.CATEGORIES.MOVIES, global.CPB.ORDERS.SEEDERS.DES, global.CPB.QUALITY.GOOD, 5));
+$("#refresh").on("click", function() {
+    global.CPB.getListTorrents(global.CPB.CATEGORIES.MOVIES, global.CPB.ORDERS.SEEDERS.DES, global.CPB.QUALITY.GOOD, 5);
+});
 
 
 /* NAVIGATION */
@@ -29,6 +31,10 @@ $('.movie-list .movie-survey').on('click', function () {
 $('.back-to-list').on('click', function() {
     $('.movie-list').css('display', 'block');
     $('.movie-detail').css('display', 'none');
+});
+
+$('.search').on('click', function() {
+    global.CPB.getal
 });
 
 /* END NAVIGATION */
