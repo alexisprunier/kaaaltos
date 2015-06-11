@@ -24,6 +24,20 @@ global.CPB.setEventGetRows(functionTest);
 
 console.log('list', global.CPB.getListTorrents(global.CPB.CATEGORIES.MOVIES, global.CPB.ORDERS.SEEDERS.DES, global.CPB.QUALITY.GOOD, 5));
 
+
+/* NAVIGATION */
+$('.movie-list .movie-survey').on('click', function () {
+    $('.movie-list').css('display', 'none');
+    $('.movie-detail').css('display', 'block');
+});
+
+$('.back-to-list').on('click', function() {
+    $('.movie-list').css('display', 'block');
+    $('.movie-detail').css('display', 'none');
+});
+
+/* END NAVIGATION */
+
 /*
 
 var engine = torrentStream('magnet:?xt=urn:btih:64F7F9E5E328C0D164C03C117B6DA9FB764A3B97&dn=The+Hunger+Games+Mockingjay+Part+1+2014+FRENCH+720p+BluRay+x264-PRiDEHD&udp://tracker.openbittorrent.com:80/announce&udp://open.demonii.com:1337');

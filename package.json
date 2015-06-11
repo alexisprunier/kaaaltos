@@ -1,12 +1,19 @@
 {
-  "name": "Kaaaltos",
-  "version": "0.1.0",
-  "description": "Torrent Client to stream from cpabien.pw website.",
-  "main": "index.html",
-  "window": {
-      "title":"Kaaaltos",
-      "toolbar":true,
-      "frame": true
+    "name": "Kaaaltos",
+    "version": "0.1.0",
+    "description": "Torrent Client to stream from cpabien.pw website.",
+    "main": "index.html",
+    "window": {
+        "title": "Kaaaltos",
+        "toolbar": true,
+        "frame": true
 
-  }
+    }
+    "dependencies": {
+        "cheerio": "0.19.0",
+        "font-awesome": "4.3.0",
+        "jquery": "2.1.4",
+        "request": "2.57.0",
+        "torrent-stream": "0.19.2"
+    }
 }

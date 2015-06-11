@@ -6,15 +6,82 @@
     <title>Pop</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Hello world</h1>
-    <video width="500" height="500" id="video" preload="auto" controls autoplay="true" src="" type="video/mp4" class="video-js vjs-default-skin" data-setup="{}">
-    </video>
+    <!--<video width="500" height="500" id="video" preload="auto" controls autoplay="true" src="" type="video/mp4" class="video-js vjs-default-skin" data-setup="{}">
+    </video>-->
+    <header>
+        <label class="title">Kaaaltos</label>
+    </header>
+    <nav>
+        <input type="text" placeholder="Rechercher un film..." />
+    </nav>
 
+    <div class="view movie-list">
+        <!-- TODO : REMOVE EXAMPLE -->
+        <div class="movie-survey ">
+            <img alt="Movie" src="test.png" />
+        </div>
+        <div class="movie-survey">
+            <img alt="Movie" src="test.png" />
+        </div>
+        <div class="movie-survey">
+            <img alt="Movie" src="test.png" />
+        </div>
+        <div class="movie-survey">
+            <img alt="Movie" src="test.png" />
+        </div>
+        <div class="movie-survey">
+            <img alt="Movie" src="test.png" />
+        </div>
+        <div class="movie-survey">
+            <img alt="Movie" src="test.png" />
+        </div>
+        <div class="movie-survey">
+            <img alt="Movie" src="test.png" />
+        </div>
+        <div class="movie-survey">
+            <img alt="Movie" src="test.png" />
+        </div>
+        <div class="movie-survey">
+            <img alt="Movie" src="test.png" />
+        </div>
+        <div class="movie-survey">
+            <img alt="Movie" src="test.png" />
+        </div>
+        <div class="movie-survey">
+            <img alt="Movie" src="test.png" />
+        </div>
+        <div class="movie-survey">
+            <img alt="Movie" src="test.png" />
+        </div>
+        <div class="movie-survey">
+            <img alt="Movie" src="test.png" />
+        </div>
+    </div>
+
+    <div class="view movie-detail">
+        <div class="navigation back-to-list">
+            <i class="fa fa-arrow-left fa-2x"></i>
+        </div>
+        <!-- TODO : REMOVE EXAMPLE -->
+        <div class="cover">
+            <img alt="Cover" src="cover.png" />
+        </div>
+        <div class="movie-survey">
+            <img alt="Movie" src="test.png" />
+        </div>
+    </div>
+
+    <div class="right-panel">
+
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="app.js"></script>
     <script src="http://vjs.zencdn.net/4.12/video.js"></script>
 </body>
