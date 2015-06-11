@@ -3,14 +3,26 @@ var CACHE_PERCENT = 3;
 var torrentDir = 'torrent-stream';
 var torrentStream = require('torrent-stream');
 var path = require('path');
-
 var cpb = require('./lib/cpb.js');
 
-var CPB = cpb.CPB;
+global.CPB = cpb.CPB;
 
-console.log('list', CPB.getListTorrents(CPB.CATEGORIES.MOVIES, CPB.ORDERS.SEEDERS.DES, CPB.QUALITY.GOOD, 5));
+global.listFilms = null;
+
+//global.CPB.eventGetRows = function (lf) {
+var functionTest = function (lf) {
+    global.listFilms = lf;
+    var content = "oui";
+    for (l in lf) {
+        content += l;
+    }
+    console.log("lasttest", lf);
+}
+global.CPB.setEventGetRows(functionTest);
 
 
+
+console.log('list', global.CPB.getListTorrents(global.CPB.CATEGORIES.MOVIES, global.CPB.ORDERS.SEEDERS.DES, global.CPB.QUALITY.GOOD, 5));
 
 /*
 
