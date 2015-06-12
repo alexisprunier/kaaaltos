@@ -17,30 +17,21 @@ global.CPB.setEventGetRows(function (listTorrents) {
     var mergedListTorrent = [];
     var torrentListNames = [];
     for (i = 0; i < listTorrents.length; i++) {
-<<<<<<< HEAD
-        var result = trakt.searchAll(listTorrents[i].name, function (res) {
-
-            $(".movie-list").append("<div class='movie-survey'><img alt='Movie' src='" + result.value().length == 0 ? "" : result.value()[0].movie.images.fanart.medium + "' />" + listTorrents[i].name + "</div>");
-
-        });
-
-=======
+        console.log(listTorrents[i]);
         if (torrentListNames.indexOf(listTorrents[i].name.toUpperCase()) == -1) {
             mergedListTorrent.push(listTorrents[i]);
             torrentListNames.push(listTorrents[i].name.toUpperCase());
         }
     }
-
+    console.log('jeanmarc', mergedListTorrent[i]);
     for (i = 0; i < mergedListTorrent.length; i++) {
-        $('.movie-list').append('<div class="movie-survey"><img alt="Movie" src="test.png" />' + listTorrents[i].name + '</div>');
-        var result = trakt.searchAll(listTorrents[i].name, function (res) {});
-        console.log('aaa', result);
-        console.log('bbb', result['_bitField']);
-        console.log('ddd', result._value()[0].movie);
-        console.log('ccc', result._value().pop());
-        console.log('eee', result._value()[0].movie.image.fanart.medium)
-        $(".movie-list").append("<div class='movie-survey'><img alt='Movie' src='" + result._settledValue /*.movie.image.fanart.medium*/ + "' />" + listTorrents[i].name + "</div>");
->>>>>>> kaaaltos/master
+        var result = trakt.searchAll(mergedListTorrent[i].name, function (res) {
+            console.log('aaa', mergedListTorrent[i]);
+            console.log('bbb', mergedListTorrent[i].name);
+            console.log('ccc', result.value().length == 0 ? "" : result.value()[0].movie.images.fanart.medium);
+
+            $(".movie-list").append("<div class='movie-survey'><img alt='Movie' src='" + result.value().length == 0 ? "" : result.value()[0].movie.images.fanart.medium + "' />" + mergedListTorrent[i].name + "</div>");
+        });
     }
 });
 
