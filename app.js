@@ -10,12 +10,21 @@ global.CPB = cpb.CPB;
 
 
 global.CPB.setEventGetRows(function (listTorrents) {
-    $(".movie-list").empty();
+    $('.movie-list').empty();
+
+    var mergedListTorrent = [];
+    var torrentListNames = [];
     for (i = 0; i < listTorrents.length; i++) {
-        $(".movie-list").append("<div class='movie-survey'><img alt='Movie' src='test.png' />" + listTorrents[i].name + "</div>");
+        if (torrentListNames.indexOf(listTorrents[i].name.toUpperCase()) == -1) {
+            mergedListTorrent.push(listTorrents[i]);
+            torrentListNames.push(listTorrents[i].name.toUpperCase());
+        }
+    }
+
+    for (i = 0; i < mergedListTorrent.length; i++) {
+        $('.movie-list').append('<div class="movie-survey"><img alt="Movie" src="test.png" />' + listTorrents[i].name + '</div>');
     }
 });
-global.CPB.search("samba", global.CPB.CATEGORIES.MOVIES, global.CPB.QUALITY.GOOD, 30);
 
 
 
@@ -35,16 +44,11 @@ $('.back-to-list').on('click', function () {
     $('.movie-detail').css('display', 'none');
 });
 
-<<<<<<< HEAD
 $('#search').on('keypress', function (event) {
     if (event.which == 13 && !event.shiftKey) {
         event.preventDefault();
-        global.CPB.search(global.CPB.QUALITY.ALL, $('#search').val());
+        global.CPB.search($('#search').val(), global.CPB.CATEGORIES.MOVIES, global.CPB.QUALITY.ALL, 100);
     }
-=======
-$('.search').on('click', function () {
-    global.CPB.getal
->>>>>>> origin/master
 });
 
 /* END NAVIGATION */
