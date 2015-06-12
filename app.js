@@ -14,13 +14,12 @@ global.CPB = cpb.CPB;
 global.CPB.setEventGetRows(function (listTorrents) {
     $(".movie-list").empty();
     for (i = 0; i < listTorrents.length; i++) {
-        var result = trakt.searchAll(listTorrents[i].name, function (res) {});
-        console.log('aaa', result);
-        console.log('bbb', result['_bitField']);
-        console.log('ddd', result._value()[0].movie);
-        console.log('ccc', result._value().pop());
-        console.log('eee', result._value()[0].movie.image.fanart.medium)
-        $(".movie-list").append("<div class='movie-survey'><img alt='Movie' src='" + result._settledValue /*.movie.image.fanart.medium*/ + "' />" + listTorrents[i].name + "</div>");
+        var result = trakt.searchAll(listTorrents[i].name, function (res) {
+
+            $(".movie-list").append("<div class='movie-survey'><img alt='Movie' src='" + result.value().length == 0 ? "" : result.value()[0].movie.images.fanart.medium + "' />" + listTorrents[i].name + "</div>");
+
+        });
+
     }
 });
 global.CPB.search("samba", global.CPB.CATEGORIES.MOVIES, global.CPB.QUALITY.GOOD, 30);
