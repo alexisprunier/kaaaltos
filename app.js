@@ -9,8 +9,6 @@ var trakt = Trakt('515a27ba95fbd83f20690e5c22bceaff0dfbde7c ');
 
 global.CPB = cpb.CPB;
 
-
-
 global.CPB.setEventGetRows(function (listTorrents) {
     $('.movie-list').empty();
 
@@ -23,15 +21,15 @@ global.CPB.setEventGetRows(function (listTorrents) {
             torrentListNames.push(listTorrents[i].name.toUpperCase());
         }
     }
-    console.log('jeanmarc', mergedListTorrent[i]);
-    for (i = 0; i < mergedListTorrent.length; i++) {
-        var result = trakt.searchAll(mergedListTorrent[i].name, function (res) {
-            console.log('aaa', mergedListTorrent[i]);
-            console.log('bbb', mergedListTorrent[i].name);
-            console.log('ccc', result.value().length == 0 ? "" : result.value()[0].movie.images.fanart.medium);
 
-            $(".movie-list").append("<div class='movie-survey'><img alt='Movie' src='" + result.value().length == 0 ? "" : result.value()[0].movie.images.fanart.medium + "' />" + mergedListTorrent[i].name + "</div>");
-        });
+    for (i = 0; i < mergedListTorrent.length; i++) {
+        trakt.searchAll(mergedListTorrent[i].name).then(function(result) {
+            console.log('bbb', result);
+            console.log('aaa', result[0]);
+
+
+            $(".movie-list").append('<div class="movie-survey"><img alt="Movie" src="' + (result[0].length == 0 ? "" : result[0].movie.images.fanart.medium) + '" />' + result[0].movie.title + '</div>');
+        }).catch(function(error){console.log('error', error)});
     }
 });
 
