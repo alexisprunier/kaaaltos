@@ -35,8 +35,16 @@ $('.back-to-list').on('click', function () {
     $('.movie-detail').css('display', 'none');
 });
 
+<<<<<<< HEAD
+$('#search').on('keypress', function (event) {
+    if (event.which == 13 && !event.shiftKey) {
+        event.preventDefault();
+        global.CPB.search(global.CPB.QUALITY.ALL, $('#search').val());
+    }
+=======
 $('.search').on('click', function () {
     global.CPB.getal
+>>>>>>> origin/master
 });
 
 /* END NAVIGATION */
