@@ -4,6 +4,8 @@ var torrentDir = 'torrent-stream';
 var torrentStream = require('torrent-stream');
 var path = require('path');
 var cpb = require('./lib/cpb.js');
+var Trakt = require('trakt-api');
+var trakt = Trakt('515a27ba95fbd83f20690e5c22bceaff0dfbde7c ');
 
 global.CPB = cpb.CPB;
 
@@ -23,6 +25,13 @@ global.CPB.setEventGetRows(function (listTorrents) {
 
     for (i = 0; i < mergedListTorrent.length; i++) {
         $('.movie-list').append('<div class="movie-survey"><img alt="Movie" src="test.png" />' + listTorrents[i].name + '</div>');
+        var result = trakt.searchAll(listTorrents[i].name, function (res) {});
+        console.log('aaa', result);
+        console.log('bbb', result['_bitField']);
+        console.log('ddd', result._value()[0].movie);
+        console.log('ccc', result._value().pop());
+        console.log('eee', result._value()[0].movie.image.fanart.medium)
+        $(".movie-list").append("<div class='movie-survey'><img alt='Movie' src='" + result._settledValue /*.movie.image.fanart.medium*/ + "' />" + listTorrents[i].name + "</div>");
     }
 });
 
@@ -31,7 +40,6 @@ global.CPB.setEventGetRows(function (listTorrents) {
 $("#refresh").on("click", function () {
     global.CPB.getListTorrents(global.CPB.CATEGORIES.MOVIES, global.CPB.ORDERS.SEEDERS.DES, global.CPB.QUALITY.GOOD, 5);
 });
-
 
 /* NAVIGATION */
 $('.movie-list .movie-survey').on('click', function () {
@@ -50,6 +58,9 @@ $('#search').on('keypress', function (event) {
         global.CPB.search($('#search').val(), global.CPB.CATEGORIES.MOVIES, global.CPB.QUALITY.ALL, 100);
     }
 });
+
+
+global.CPB.getListTorrents(global.CPB.CATEGORIES.MOVIES, global.CPB.ORDERS.SEEDERS.DES, global.CPB.QUALITY.GOOD, 5);
 
 /* END NAVIGATION */
 
