@@ -12,12 +12,12 @@ global.listFilms = null;
 global.CPB.setEventGetRows(function (listTorrents) {
     $(".movie-list").empty();
     for (i = 0; i < listTorrents.length; i++) {
-        $(".movie-list").append("<div class='movie-survey'><img alt='Movie' src='test.png' />"+listTorrents[i].name+"</div>");
+        $(".movie-list").append("<div class='movie-survey'><img alt='Movie' src='test.png' />" + listTorrents[i].name + "</div>");
     }
 });
 
 
-$("#refresh").on("click", function() {
+$("#refresh").on("click", function () {
     global.CPB.getListTorrents(global.CPB.CATEGORIES.MOVIES, global.CPB.ORDERS.SEEDERS.DES, global.CPB.QUALITY.GOOD, 5);
 });
 
@@ -28,13 +28,16 @@ $('.movie-list .movie-survey').on('click', function () {
     $('.movie-detail').css('display', 'block');
 });
 
-$('.back-to-list').on('click', function() {
+$('.back-to-list').on('click', function () {
     $('.movie-list').css('display', 'block');
     $('.movie-detail').css('display', 'none');
 });
 
-$('.search').on('click', function() {
-    global.CPB.getal
+$('#search').on('keypress', function (event) {
+    if (event.which == 13 && !event.shiftKey) {
+        event.preventDefault();
+        global.CPB.search(global.CPB.QUALITY.ALL, $('#search').val());
+    }
 });
 
 /* END NAVIGATION */
