@@ -25,6 +25,7 @@ global.CPB.setEventGetRows(function (listTorrents) {
     for (i = 0; i < mergedListTorrent.length; i++) {
         trakt.searchAll(mergedListTorrent[i].name).then(function(result) {
             $(".movie-list").append('<div class="movie-survey"><img alt="Movie" src="' + (result[0].length == 0 ? "" : result[0].movie.images.poster.thumb) + '" />' + result[0].movie.title + '</div>');
+            console.log(result);
         }).catch(function(error){console.log('error', error)});
     }
 });
