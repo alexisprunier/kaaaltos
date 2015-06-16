@@ -6,7 +6,7 @@
     "window": {
         "title": "Kaaaltos",
         "toolbar": true,
-        "frame": false
+        "frame": true
 
     },
     "dependencies": {
