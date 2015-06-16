@@ -48,7 +48,7 @@ function setMovieInformation(torrentName) {
     trakt.searchAll(torrentName).then(function (result) {
         $('.movie-detail .cover').empty();
         $('.movie-detail .cover').append('<img alt="Cover" src="' + result[0].movie.images.fanart.full + '" />');
-        
+
         $('.movie-detail .movie-survey').empty();
         $('.movie-detail .movie-survey').append('<img alt="Survey" src="' + result[0].movie.images.poster.thumb + '" />');
     });
@@ -56,17 +56,17 @@ function setMovieInformation(torrentName) {
 
 
 $("#refresh").on("click", function () {
-    global.CPB.getListTorrents(global.CPB.CATEGORIES.MOVIES, global.CPB.ORDERS.SEEDERS.DES, global.CPB.QUALITY.GOOD, 5);
+    global.CPB.getListTorrents(global.CPB.CATEGORIES.MOVIES, global.CPB.ORDERS.SEEDERS.DES, global.CPB.QUALITY.GOOD, 30);
 });
 
 /* NAVIGATION */
 
-global.CPB.getListTorrents(global.CPB.CATEGORIES.MOVIES, global.CPB.ORDERS.SEEDERS.DES, global.CPB.QUALITY.GOOD, 5);
+global.CPB.getListTorrents(global.CPB.CATEGORIES.MOVIES, global.CPB.ORDERS.SEEDERS.DES, global.CPB.QUALITY.GOOD, 30);
 
 $('#search').on('keypress', function (event) {
     if (event.which == 13 && !event.shiftKey) {
         event.preventDefault();
-        global.CPB.search($('#search').val(), global.CPB.CATEGORIES.MOVIES, global.CPB.QUALITY.ALL, 100);
+        global.CPB.search($('#search').val(), global.CPB.CATEGORIES.MOVIES, global.CPB.QUALITY.ALL, 30);
     }
 });
 
