@@ -10,7 +10,7 @@ var trakt = Trakt('515a27ba95fbd83f20690e5c22bceaff0dfbde7c ');
 global.CPB = cpb.CPB;
 
 global.CPB.setEventGetRows(function (listTorrents) {
-    $('.movie-list').empty();
+    $('.movie-list .wrapper').empty();
 
     var mergedListTorrent = [];
     var torrentListNames = [];
@@ -23,12 +23,36 @@ global.CPB.setEventGetRows(function (listTorrents) {
     }
 
     for (i = 0; i < mergedListTorrent.length; i++) {
-        trakt.searchAll(mergedListTorrent[i].name).then(function(result) {
-            $(".movie-list").append('<div class="movie-survey"><img alt="Movie" src="' + (result[0].length == 0 ? "" : result[0].movie.images.poster.thumb) + '" />' + result[0].movie.title + '</div>');
-        }).catch(function(error){console.log('error', error)});
+        trakt.searchAll(mergedListTorrent[i].name).then(function (result) {
+            $('.movie-list .wrapper').append('<div class="movie-survey"><img id="' + result[0].movie.title + '" alt="Movie" src="' +
+                (result[0].length == 0 ? "" : result[0].movie.images.poster.thumb) +
+                '" /><label class="movie-title">' + result[0].movie.title + '</label></div>');
+
+            $('.movie-list .movie-survey').on('click', function (event) {
+                $('.movie-list').css('display', 'none');
+                $('.movie-detail').css('display', 'block');
+                setMovieInformation(event.target.id);
+            });
+
+            $('.back-to-list').on('click', function () {
+                $('.movie-list').css('display', 'block');
+                $('.movie-detail').css('display', 'none');
+            });
+        }).catch(function (error) {
+            console.log('error', error)
+        });
     }
 });
 
+function setMovieInformation(torrentName) {
+    trakt.searchAll(torrentName).then(function (result) {
+        $('.movie-detail .cover').empty();
+        $('.movie-detail .cover').append('<img alt="Cover" src="' + result[0].movie.images.fanart.full + '" />');
+        
+        $('.movie-detail .movie-survey').empty();
+        $('.movie-detail .movie-survey').append('<img alt="Survey" src="' + result[0].movie.images.poster.thumb + '" />');
+    });
+};
 
 
 $("#refresh").on("click", function () {
@@ -36,15 +60,8 @@ $("#refresh").on("click", function () {
 });
 
 /* NAVIGATION */
-$('.movie-list .movie-survey').on('click', function () {
-    $('.movie-list').css('display', 'none');
-    $('.movie-detail').css('display', 'block');
-});
 
-$('.back-to-list').on('click', function () {
-    $('.movie-list').css('display', 'block');
-    $('.movie-detail').css('display', 'none');
-});
+global.CPB.getListTorrents(global.CPB.CATEGORIES.MOVIES, global.CPB.ORDERS.SEEDERS.DES, global.CPB.QUALITY.GOOD, 5);
 
 $('#search').on('keypress', function (event) {
     if (event.which == 13 && !event.shiftKey) {
@@ -52,9 +69,6 @@ $('#search').on('keypress', function (event) {
         global.CPB.search($('#search').val(), global.CPB.CATEGORIES.MOVIES, global.CPB.QUALITY.ALL, 100);
     }
 });
-
-
-global.CPB.getListTorrents(global.CPB.CATEGORIES.MOVIES, global.CPB.ORDERS.SEEDERS.DES, global.CPB.QUALITY.GOOD, 5);
 
 /* END NAVIGATION */
 

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Pop</title>
+    <title>Kaaaltos</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
@@ -18,28 +18,31 @@
         <label class="title">Kaaaltos</label>
     </header>
     <nav>
-        <input id="search" type="text" placeholder="Rechercher un film..." />
+        <div class="nav-item">
+            <input id="search" type="text" placeholder="Rechercher un film..." />
+        </div>
     </nav>
 
     <div class="view movie-list">
-
+        <div class="wrapper"></div>
     </div>
 
     <div class="view movie-detail">
         <div class="navigation back-to-list">
             <i class="fa fa-arrow-left fa-2x"></i>
         </div>
-        <!-- TODO : REMOVE EXAMPLE -->
         <div class="cover">
-            <img alt="Cover" src="cover.png" />
+            
         </div>
         <div class="movie-survey">
-            <img alt="Movie" src="test.png" />
+            
         </div>
     </div>
 
     <div class="right-panel">
-        <button id="refresh">But</button>
+        <div id="refresh">
+            <i class="fa fa-refresh fa-2x"></i>
+        </div>
     </div>
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
