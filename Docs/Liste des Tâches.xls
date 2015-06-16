@@ -1,0 +1,815 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<title>JIRA</title>
+<style type="text/css">
+table {
+    mso-displayed-decimal-separator:"\.";
+    mso-displayed-thousand-separator:"\,";
+}
+body
+{
+    margin: 0px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    color:black;
+}
+
+</style>
+<META HTTP-EQUIV="Content-Type" Content="application/vnd.ms-excel; charset=UTF-8">
+<!-- JRA-7598 - ensure fields (e.g. description) occupy only one cell - even fields containing newlines. -->
+<!--
+Vertical align all cells to the top, in order to align all issue rows of issuetable to the top,
+since Excel does not use or save the css files it is hardcoded here.
+-->
+<style>
+@page
+{
+mso-page-orientation:landscape;
+margin:.25in .25in .5in .25in;
+mso-header-margin:.5in;
+mso-footer-margin:.25in;
+mso-footer-data:"&R&P of &N";
+mso-horizontal-page-align:center;
+mso-vertical-page-align:center;
+}
+
+td.issuekey,
+td.issuetype,
+td.status {
+    mso-style-parent: "";
+    mso-number-format: \@;
+    text-align: left;
+}
+br
+{
+    mso-data-placement:same-cell;
+}
+
+td
+{
+    vertical-align: top;
+}
+</style>
+
+<!--[if gte mso 9]><xml>
+<x:ExcelWorkbook>
+<x:ExcelWorksheets>
+<x:ExcelWorksheet>
+<x:Name>general_report</x:Name>
+<x:WorksheetOptions>
+<x:Print>
+<x:ValidPrinterInfo/>
+</x:Print>
+</x:WorksheetOptions>
+</x:ExcelWorksheet>
+</x:ExcelWorksheets>
+</x:ExcelWorkbook>
+</xml><![endif]-->
+</head>
+<body>
+
+<table border="1">
+    <tr bgcolor="#205081" height="30">
+        <td colspan="11">
+            <img src="https://aaascrum.atlassian.net/images/icon-jira-logo.png" width="57" height="30" border="0" alt="JIRA">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="11">
+            <a href="https://aaascrum.atlassian.net/secure/IssueNavigator.jspa?reset=true&jqlQuery=issuekey+in+issueHistory%28%29+ORDER+BY+lastViewed+DESC">JIRA</a>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="11">
+            Displaying <strong>24</strong> issues at <strong>16/Jun/15 2:22 PM</strong>.
+        </td>
+    </tr>
+</table>
+
+
+
+
+                                        <table id="issuetable"  border="1" cellpadding="3" cellspacing="1" width="100%">
+                        <thead>
+        <tr class="rowHeader">
+            
+                                                            <th class="colHeaderLink headerrow-issuetype" data-id="issuetype">
+                            Issue Type
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuekey" data-id="issuekey">
+                            Key
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-summary" data-id="summary">
+                            Summary
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-assignee" data-id="assignee">
+                            Assignee
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-reporter" data-id="reporter">
+                            Reporter
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-priority" data-id="priority">
+                            Priority
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-status" data-id="status">
+                            Status
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-resolution" data-id="resolution">
+                            Resolution
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-created" data-id="created">
+                            Created
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-updated" data-id="updated">
+                            Updated
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-duedate" data-id="duedate">
+                            Due Date
+                                                    </th>
+                                                                    </tr>
+    </thead>
+    <tbody>
+                    
+
+                <tr id="issuerow10036" rel="10036" data-issuekey="KAAAL-37" class="issuerow">
+                                            <td class="issuetype"> Task</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-37" href="https://aaascrum.atlassian.net/browse/KAAAL-37">KAAAL-37</a>
+</td>
+                                            <td class="summary"><p>
+                Créer les tests unitaires
+    </p>
+</td>
+                                            <td class="assignee">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 12/Jun/15 3:07 PM </td>
+                                            <td class="updated"> 16/Jun/15 9:08 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10002" rel="10002" data-issuekey="KAAAL-3" class="issuerow">
+                                            <td class="issuetype"> Story</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-3" href="https://aaascrum.atlassian.net/browse/KAAAL-3">KAAAL-3</a>
+</td>
+                                            <td class="summary"><p>
+                Visionner un film
+    </p>
+</td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 09/Jun/15 2:55 PM </td>
+                                            <td class="updated"> 16/Jun/15 9:08 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10025" rel="10025" data-issuekey="KAAAL-26" class="issuerow">
+                                            <td class="issuetype"> Sub-task</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-26" href="https://aaascrum.atlassian.net/browse/KAAAL-26">KAAAL-26</a>
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">KAAAL-3</span>
+                Appli - Développer la lecture du film
+    </p>
+</td>
+                                            <td class="assignee">            Anthony Hivert
+    </td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 10/Jun/15 9:39 AM </td>
+                                            <td class="updated"> 16/Jun/15 9:07 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10024" rel="10024" data-issuekey="KAAAL-25" class="issuerow">
+                                            <td class="issuetype"> Sub-task</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-25" href="https://aaascrum.atlassian.net/browse/KAAAL-25">KAAAL-25</a>
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">KAAAL-3</span>
+                Appli - Intégrer le lecteur de films dans l&#39;application
+    </p>
+</td>
+                                            <td class="assignee">            Anthony Hivert
+    </td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 10/Jun/15 9:39 AM </td>
+                                            <td class="updated"> 16/Jun/15 9:07 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10026" rel="10026" data-issuekey="KAAAL-27" class="issuerow">
+                                            <td class="issuetype"> Story</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-27" href="https://aaascrum.atlassian.net/browse/KAAAL-27">KAAAL-27</a>
+</td>
+                                            <td class="summary"><p>
+                Afficher les détails d&#39;un film
+    </p>
+</td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 10/Jun/15 9:40 AM </td>
+                                            <td class="updated"> 16/Jun/15 9:07 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10027" rel="10027" data-issuekey="KAAAL-28" class="issuerow">
+                                            <td class="issuetype"> Sub-task</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-28" href="https://aaascrum.atlassian.net/browse/KAAAL-28">KAAAL-28</a>
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">KAAAL-27</span>
+                Appli - Développer l&#39;affichage des détails d&#39;un film
+    </p>
+</td>
+                                            <td class="assignee">            Audebeau Alexandre
+    </td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 10/Jun/15 9:41 AM </td>
+                                            <td class="updated"> 16/Jun/15 9:07 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10018" rel="10018" data-issuekey="KAAAL-19" class="issuerow">
+                                            <td class="issuetype"> Story</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-19" href="https://aaascrum.atlassian.net/browse/KAAAL-19">KAAAL-19</a>
+</td>
+                                            <td class="summary"><p>
+                Consulter les films disponibles (avec jaquette et note)
+    </p>
+</td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 10/Jun/15 9:31 AM </td>
+                                            <td class="updated"> 12/Jun/15 2:42 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10019" rel="10019" data-issuekey="KAAAL-20" class="issuerow">
+                                            <td class="issuetype"> Sub-task</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-20" href="https://aaascrum.atlassian.net/browse/KAAAL-20">KAAAL-20</a>
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">KAAAL-19</span>
+                Librairie TrackTV - Faire une veille sur les librairies disponibles
+    </p>
+</td>
+                                            <td class="assignee">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 10/Jun/15 9:32 AM </td>
+                                            <td class="updated"> 12/Jun/15 2:42 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10020" rel="10020" data-issuekey="KAAAL-21" class="issuerow">
+                                            <td class="issuetype"> Sub-task</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-21" href="https://aaascrum.atlassian.net/browse/KAAAL-21">KAAAL-21</a>
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">KAAAL-19</span>
+                Librairie TrackTV - Intégrer la librarie
+    </p>
+</td>
+                                            <td class="assignee">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 10/Jun/15 9:33 AM </td>
+                                            <td class="updated"> 12/Jun/15 2:42 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10032" rel="10032" data-issuekey="KAAAL-33" class="issuerow">
+                                            <td class="issuetype"> Sub-task</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-33" href="https://aaascrum.atlassian.net/browse/KAAAL-33">KAAAL-33</a>
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">KAAAL-19</span>
+                Appli - Développer l&#39;affichage de jaquette
+    </p>
+</td>
+                                            <td class="assignee">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 10/Jun/15 10:45 AM </td>
+                                            <td class="updated"> 12/Jun/15 2:42 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10001" rel="10001" data-issuekey="KAAAL-2" class="issuerow">
+                                            <td class="issuetype"> Story</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-2" href="https://aaascrum.atlassian.net/browse/KAAAL-2">KAAAL-2</a>
+</td>
+                                            <td class="summary"><p>
+                Rechercher un film
+    </p>
+</td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 09/Jun/15 2:54 PM </td>
+                                            <td class="updated"> 12/Jun/15 2:40 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10022" rel="10022" data-issuekey="KAAAL-23" class="issuerow">
+                                            <td class="issuetype"> Sub-task</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-23" href="https://aaascrum.atlassian.net/browse/KAAAL-23">KAAAL-23</a>
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">KAAAL-2</span>
+                Appli - Développer la recherche de film par nom
+    </p>
+</td>
+                                            <td class="assignee">            Audebeau Alexandre
+    </td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 10/Jun/15 9:36 AM </td>
+                                            <td class="updated"> 12/Jun/15 2:40 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10023" rel="10023" data-issuekey="KAAAL-24" class="issuerow">
+                                            <td class="issuetype"> Sub-task</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-24" href="https://aaascrum.atlassian.net/browse/KAAAL-24">KAAAL-24</a>
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">KAAAL-2</span>
+                Librairie CPB - Développer la récupération de film par nom
+    </p>
+</td>
+                                            <td class="assignee">            Anthony Hivert
+    </td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 10/Jun/15 9:37 AM </td>
+                                            <td class="updated"> 12/Jun/15 1:46 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10000" rel="10000" data-issuekey="KAAAL-1" class="issuerow">
+                                            <td class="issuetype"> Story</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-1" href="https://aaascrum.atlassian.net/browse/KAAAL-1">KAAAL-1</a>
+</td>
+                                            <td class="summary"><p>
+                Consulter les films disponibles (uniquement par nom)
+    </p>
+</td>
+                                            <td class="assignee">    <em>Unassigned</em>
+</td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 09/Jun/15 2:53 PM </td>
+                                            <td class="updated"> 12/Jun/15 9:30 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10021" rel="10021" data-issuekey="KAAAL-22" class="issuerow">
+                                            <td class="issuetype"> Sub-task</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-22" href="https://aaascrum.atlassian.net/browse/KAAAL-22">KAAAL-22</a>
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">KAAAL-1</span>
+                Librarie CPB - Développer la récupération de données
+    </p>
+</td>
+                                            <td class="assignee">            Anthony Hivert
+    </td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 10/Jun/15 9:34 AM </td>
+                                            <td class="updated"> 12/Jun/15 9:30 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10016" rel="10016" data-issuekey="KAAAL-17" class="issuerow">
+                                            <td class="issuetype"> Sub-task</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-17" href="https://aaascrum.atlassian.net/browse/KAAAL-17">KAAAL-17</a>
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">KAAAL-1</span>
+                Librairie CPB - Développer les méthodes de getters sur les données de films
+    </p>
+</td>
+                                            <td class="assignee">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 10/Jun/15 9:29 AM </td>
+                                            <td class="updated"> 12/Jun/15 9:26 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10029" rel="10029" data-issuekey="KAAAL-30" class="issuerow">
+                                            <td class="issuetype"> Task</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-30" href="https://aaascrum.atlassian.net/browse/KAAAL-30">KAAAL-30</a>
+</td>
+                                            <td class="summary"><p>
+                Mettre en place Jenkins
+    </p>
+</td>
+                                            <td class="assignee">            Anthony Hivert
+    </td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;">Closed</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 10/Jun/15 9:42 AM </td>
+                                            <td class="updated"> 10/Jun/15 4:00 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10031" rel="10031" data-issuekey="KAAAL-32" class="issuerow">
+                                            <td class="issuetype"> Task</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-32" href="https://aaascrum.atlassian.net/browse/KAAAL-32">KAAAL-32</a>
+</td>
+                                            <td class="summary"><p>
+                Configurer JIRA
+    </p>
+</td>
+                                            <td class="assignee">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;">Closed</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 10/Jun/15 9:45 AM </td>
+                                            <td class="updated"> 10/Jun/15 4:00 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10015" rel="10015" data-issuekey="KAAAL-16" class="issuerow">
+                                            <td class="issuetype"> Sub-task</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-16" href="https://aaascrum.atlassian.net/browse/KAAAL-16">KAAAL-16</a>
+</td>
+                                            <td class="summary"><p>
+            <span class="parentIssue">KAAAL-1</span>
+                Appli - Développer l&#39;affichage des films les plus populaires
+    </p>
+</td>
+                                            <td class="assignee">            Audebeau Alexandre
+    </td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 10/Jun/15 9:26 AM </td>
+                                            <td class="updated"> 12/Jun/15 9:21 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10035" rel="10035" data-issuekey="KAAAL-36" class="issuerow">
+                                            <td class="issuetype"> Task</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-36" href="https://aaascrum.atlassian.net/browse/KAAAL-36">KAAAL-36</a>
+</td>
+                                            <td class="summary"><p>
+                Configurer JIRA
+    </p>
+</td>
+                                            <td class="assignee">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 10/Jun/15 1:43 PM </td>
+                                            <td class="updated"> 10/Jun/15 4:13 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10034" rel="10034" data-issuekey="KAAAL-35" class="issuerow">
+                                            <td class="issuetype"> Task</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-35" href="https://aaascrum.atlassian.net/browse/KAAAL-35">KAAAL-35</a>
+</td>
+                                            <td class="summary"><p>
+                Commiter un première version du projet
+    </p>
+</td>
+                                            <td class="assignee">            Anthony Hivert
+    </td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;">Closed</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 10/Jun/15 12:08 PM </td>
+                                            <td class="updated"> 10/Jun/15 4:00 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10033" rel="10033" data-issuekey="KAAAL-34" class="issuerow">
+                                            <td class="issuetype"> Task</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-34" href="https://aaascrum.atlassian.net/browse/KAAAL-34">KAAAL-34</a>
+</td>
+                                            <td class="summary"><p>
+                Créer les maquêtes
+    </p>
+</td>
+                                            <td class="assignee">            Audebeau Alexandre
+    </td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;">Closed</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 10/Jun/15 12:01 PM </td>
+                                            <td class="updated"> 10/Jun/15 4:00 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10003" rel="10003" data-issuekey="KAAAL-4" class="issuerow">
+                                            <td class="issuetype"> Task</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-4" href="https://aaascrum.atlassian.net/browse/KAAAL-4">KAAAL-4</a>
+</td>
+                                            <td class="summary"><p>
+                Créer une maquette de l&#39;application
+    </p>
+</td>
+                                            <td class="assignee">            Audebeau Alexandre
+    </td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;">Closed</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 09/Jun/15 2:59 PM </td>
+                                            <td class="updated"> 10/Jun/15 4:00 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10030" rel="10030" data-issuekey="KAAAL-31" class="issuerow">
+                                            <td class="issuetype"> Task</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="KAAAL-31" href="https://aaascrum.atlassian.net/browse/KAAAL-31">KAAAL-31</a>
+</td>
+                                            <td class="summary"><p>
+                Commiter la structure de projet sur le GIT
+    </p>
+</td>
+                                            <td class="assignee">            Anthony Hivert
+    </td>
+                                            <td class="reporter">            Prunier Alexis [Administrator]
+    </td>
+                                            <td class="priority">   Medium
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Closed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;jira-issue-status-tooltip-desc&quot;&gt;The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.&lt;/span&gt;">Closed</span>    </td>
+                                            <td class="resolution">    Done
+</td>
+                                            <td class="created"> 10/Jun/15 9:43 AM </td>
+                                            <td class="updated"> 10/Jun/15 4:00 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                    </tr>
+                </tbody>
+    </table>
+    <div class="end-of-stable-message"></div>
+            <table border="1" >
+<tr>
+    <td bgcolor="#dddddd" colspan="11"><font size="1">
+        Generated at Tue Jun 16 14:22:02 CEST 2015 by Prunier Alexis [Administrator] using JIRA 6.5-OD-05-041#65001-sha1:e07c9f6ede7074bd21de4ab8b492355afe6390de.
+    </font></td>
+</tr>
+</table>
+
+</body>
+</html>
