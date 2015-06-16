@@ -3,6 +3,9 @@
 - Alexis Prunier (Scrummaster)
 - Alexandre Audebeau
 
+# Detail du projet
+Créer une application permettant de streamer les fichiers torrents du site cpasbien.pw afin d'obtenir une verison française de "PopcornTime".
+
 # Environnement
 
 ### Jenkins
@@ -22,9 +25,6 @@
 ![title](jira-cumulative.png)
 ![title](jira-burndown.png)
 
-# Detail du projet
-
-Créer une application permettant de streamer les fichier torrent du site cpasbine.pw afin d'obtenir une verison française de "PopcornTime".
 
 # Retour d'expérience de la méthodologie SCRUM
 
